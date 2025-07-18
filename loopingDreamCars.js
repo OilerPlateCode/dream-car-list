@@ -7,8 +7,20 @@ const dreamCars = [
     { make: "Land Rover", model: "Discovery 4", year: 2012, image: "landrover" },
 ];
 
+const main = document.getElementById("main");
 
 for (const car of dreamCars) {
     console.log(`I would love to drive a ${car.year} ${car.make} ${car.model}`);
+
+    const html = `<section class="card">
+            <img src="./assets/${car.image}.jpg" alt="ford">
+            <article class="card-content">
+                <strong>year: </strong>${car.year} <br>
+            <strong>Make: </strong>${car.make} <br>
+             <strong>Model: </strong>${car.model} <br>
+            </article>
+        </section>`
+
+        main.innerHTML += html
 }
 
